@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack-Setup
+# Microverse Capstone Project 2
 
-> In this repository, we build a simple and powerful webpack boilerplate
+> In this repository, we build the final capstone project of the second module for the Software engineer program
 
 
 ## Built With
@@ -10,33 +10,47 @@
 - HTML
 - CSS
 - JS
+- webpack
+- babel
+- jest
+- node.js/npm
 
 ## Live Demo
 
-[https://adebsa2401.github.io/Webpack-Setup/dist](https://adebsa2401.github.io/Webpack-Setup/dist)
+[https://adebsa2401.github.io/Microverse-Capstone-2](https://adebsa2401.github.io/Microverse-Capstone-2)
 
 ## Getting Started
 
 <!-- **This is an example of how you may give instructions on setting up your project locally.**
 **Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.** -->
 
-- Start cloning this repository by entering the following command:
-<pre><code>git clone https://github.com/adebsa2401/Webpack-Setup.git</code></pre>
+1. Start cloning this repository by entering the following command:
 
-- Then start a local server and open the `index.html` file in your browser
+<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone.git</code></pre>
 
-<!-- ### Prerequisites
+2. Install npm dependencies by running <pre><code>npm i</code></pre>
 
-### Setup
+3. Build assets by running <pre><code>npm run build</code></pre>
+
+4. Finally run <pre><code>npm start</code></pre> to start webpack local server. The project's entry file `index.html` should automatically open in your browser. If it doesn't, open your browser and head over to the following url: `http://localhost:8080`
+
+### Prerequisites
+
+- [node.js / npm](https://nodejs.org/en/download/)
+
+<!-- ### Setup
 
 ### Install
 
-### Usage
+### Usage -->
 
 ### Run tests
 
-### Deployment -->
+To run tests, run the command below:
 
+<pre><code>npm test</code></pre>
+
+<!-- ### Deployment -->
 
 ## Authors
 
@@ -45,6 +59,12 @@
 - GitHub: [@adebsa2401](https://github.com/adebsa2401)
 - Twitter: [@Adebsa3](https://twitter.com/Adebsa3)
 - LinkedIn: [Ben Sales](https://www.linkedin.com/in/ben-sal%C3%A8s-2688651b6)
+
+👤 **Ermiyas Demsew**
+
+- GitHub: [@The-Normal-One1](https://github.com/The-Normal-One1)
+- Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
+- LinkedIn: [Ermiyas Demsew](https://linkedin.com/in/ErmiyasDemsew)
 
 ## 🤝 Contributing
 
