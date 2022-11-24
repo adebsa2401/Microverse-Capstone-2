@@ -39,3 +39,26 @@ footer {
   height: 70px;
   background-color: darkred;
 }
+
+main {
+  text-align: center;
+  padding: 150px;
+}
+
+.items-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.item-card img {
+  width: 100%;
+  height: 250px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
