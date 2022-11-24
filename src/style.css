@@ -30,3 +30,12 @@ header {
 header form {
   margin-left: auto;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 70px;
+  background-color: darkred;
+}
