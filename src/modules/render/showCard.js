@@ -4,6 +4,7 @@ import addNewLike from '../api/newLike.js';
 import noImage from '../../assets/images/no-image.svg';
 import { addUserLike } from '../storage/localStorage.js';
 
+/* Render a Show card on the homepage */
 export default (data) => {
   const imageUrl = data.show.image ? data.show.image.medium : noImage;
   const card = document.createElement('div');
@@ -28,6 +29,7 @@ export default (data) => {
       </div>
     `.trim();
 
+  /* Create and render the likes count */
   card.querySelector('.bi-hand-thumbs-up, .bi-hand-thumbs-up-fill').addEventListener('click', async (event) => {
     const ok = await addNewLike(data.show.id);
 
@@ -43,6 +45,7 @@ export default (data) => {
     }
   });
 
+  /* Render the comments popup */
   card.querySelector('.bi-chat-left, .bi-chat-left-fill').addEventListener('click', async () => {
     const details = await queryShowDetails(data.show.id);
     renderCommentsPopup(details);

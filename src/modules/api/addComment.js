@@ -1,3 +1,4 @@
+/* Make a request to the API to create a comment */
 export default async (showId, username, comment) => {
   const response = await fetch(`${process.env.INVOLVEMENT_API_BASE_URL}apps/${process.env.INVOLVEMENT_API_KEY}/comments`, {
     method: 'POST',

@@ -1,3 +1,4 @@
+/* Create a comment card and render it into the popup */
 export default (comment) => {
   const card = document.createElement('div');
   card.classList.add('comment-card');

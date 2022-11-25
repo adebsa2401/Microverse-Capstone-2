@@ -4,6 +4,7 @@ import noImage from '../../assets/images/no-image.svg';
 import addComment from '../api/addComment.js';
 import { addUserComment } from '../storage/localStorage.js';
 
+/* Create and render the comments popup for a given show */
 export default (data) => {
   const imageUrl = data.image ? data.image.original : noImage;
   const popup = document.createElement('div');
@@ -35,20 +36,24 @@ export default (data) => {
     </div>
   `.trim();
 
+  // Close the popup
   popup.querySelector('.bi-x-lg').addEventListener('click', () => {
     popup.remove();
   });
   document.body.prepend(popup);
   data.comments.forEach(renderCommentCard);
 
+  // render comments count
   popup.querySelector('.count').textContent = `(${countComments(popup)})`;
 
+  // display a specific message in the comments list placeholder for 0 comments
   const commentsList = popup.querySelector('.comments-list');
   if (commentsList.childElementCount === 0) {
     commentsList.textContent = 'No comments available';
     commentsList.classList.add('empty-list');
   }
 
+  // create a comment on the API and render it in the popup
   popup.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
     const username = event.target.querySelector('input[name="user"]').value;
