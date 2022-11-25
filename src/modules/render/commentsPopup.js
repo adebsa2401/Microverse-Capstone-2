@@ -1,4 +1,5 @@
 import renderCommentCard from './commentCard.js';
+import countComments from '../counter/comments.js';
 import noImage from '../../assets/images/no-image.svg';
 
 export default (data) => {
@@ -18,7 +19,7 @@ export default (data) => {
         <li><strong>Official Site:</strong> <a href="${data.officialSite}" target="_blank" rel="noopener">${data.officialSite}</a></li>
       </ul>
 
-      <h2>Comments <span class="count">(${data.comments.length})</span></h2>
+      <h2>Comments <span class="count"></span></h2>
 
       <div class="comments-list"></div>
 
@@ -37,6 +38,8 @@ export default (data) => {
   });
   document.body.prepend(popup);
   data.comments.forEach(renderCommentCard);
+
+  popup.querySelector('.count').textContent = `(${countComments(popup)})`;
 
   const commentsList = popup.querySelector('.comments-list');
   if (commentsList.childElementCount === 0) {
