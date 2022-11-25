@@ -19,7 +19,7 @@ export default (data) => {
         </span>
         <span class="icon-count">
           <a href="javascript:void(0)"><i class="bi bi-chat-left"></i></a>
-          <span class="count">(1)</span>
+          <span class="count">(${data.comments})</span>
         </span>
         <span class="icon-count">
           <a href="javascript:void(0)"><i class="bi bi-bookmark"></i></a>
