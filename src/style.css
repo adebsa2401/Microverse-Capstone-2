@@ -11,6 +11,51 @@ body > * {
   padding-right: 50px;
 }
 
+#logo-container {
+  border: 1px solid #000;
+  box-shadow: 5px 5px 20px #000;
+}
+
+#logo-container * {
+  display: inline;
+}
+
+#logo-container h1:first-child {
+  color: #000;
+}
+
+#logo-container h1:last-child {
+  color: #fff;
+  background-color: #000;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+
+header input, header input:active {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  color: #000000b3;
+  background-color: #d3d3d34d;
+  padding: 10px;
+  min-width: 200px;
+  font-style: italic;
+  font-size: medium;
+}
+
+header button[type="submit"] {
+  border: none;
+  background-color: #fff;
+}
+
+header button[type="submit"] * {
+  font-size: 25px;
+}
+
 .list-title {
   margin-bottom: 100px;
 }
@@ -22,10 +67,17 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 nav ul {
   gap: 30px;
+  font-size: 20px;
+}
+
+nav li.active {
+  text-shadow: 2px 2px 5px;
+  font-style: italic;
 }
 
 nav .count {
@@ -40,11 +92,6 @@ header {
   display: flex;
   align-items: center;
   height: 70px;
-  background-color: darkblue;
-}
-
-header form {
-  margin-left: auto;
 }
 
 footer {
