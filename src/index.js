@@ -3,9 +3,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style.css';
 import './modules/render/footer.js';
 import queryShows from './modules/api/queryShows.js';
-import renderItemCard from './modules/render/showCard.js';
+import renderShowsList from './modules/render/showsList.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const response = await queryShows('popular');
-  response.forEach(renderItemCard);
+  const shows = await queryShows('popular');
+  renderShowsList(shows, 'Popular');
 });
