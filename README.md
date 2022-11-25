@@ -26,7 +26,7 @@
 
 1. Start cloning this repository by entering the following command:
 
-<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone.git</code></pre>
+<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone-2.git</code></pre>
 
 2. Install npm dependencies by running <pre><code>npm i</code></pre>
 
