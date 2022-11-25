@@ -1,10 +1,13 @@
+import queryShowDetails from '../api/queryShowDetails.js';
+import renderCommentsPopup from './commentsPopup.js';
 import noImage from '../../assets/images/no-image.svg';
 
 export default (data) => {
   const imageUrl = data.show.image ? data.show.image.medium : noImage;
+  const card = document.createElement('div');
+  card.classList.add('item-card');
 
-  const html = `
-    <div class="item-card">
+  card.innerHTML = `
       <div class="item-name">${data.show.name}</div>
       <img src="${imageUrl}" alt="a show tv"/>
       <div class="card-footer">
@@ -18,8 +21,13 @@ export default (data) => {
           <span class="count">(2)</span>
         </span>
       </div>
-    </div>
     `.trim();
 
-  document.querySelector('.items-list').innerHTML += html;
+  card
+    .querySelector('.bi-chat-left')
+    .addEventListener('click', async () => {
+      const details = await queryShowDetails(data.show.id);
+      renderCommentsPopup(details);
+    });
+  document.querySelector('.items-list').append(card);
 };
