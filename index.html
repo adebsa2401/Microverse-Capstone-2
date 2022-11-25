@@ -8,33 +8,33 @@
 <body>
   <header>
     <a id="logo-container" href="">
-      <span>Wiki</span>
-      <span>Show</span>
+      <h1>Wiki</h1>
+      <h1>Show</h1>
     </a>
 
     <form method="get">
-      <input type="text" placeholder="Search TV Shows"/>
+      <input type="text" maxlength="20" placeholder="Search TV Shows"/>
       <button type="submit"><i class="bi bi-search"></i></button>
     </form>
 
     <nav>
       <ul>
-        <li>
+        <li class="active">
           <a href="javascript:void(0)">
             <span>TV Shows </span>
-            <span class="count">(0)</span>
+            <span class="count"></span>
           </a>
         </li>
         <li>
           <a href="javascript:void(0)">
             <span>Liked </span>
-            <span class="count">(0)</span>
+            <span class="count"></span>
           </a>
         </li>
         <li>
           <a href="javascript:void(0)">
             <span>Reservations </span>
-            <span class="count">(0)</span>
+            <span class="count"></span>
           </a>
         </li>
       </ul>
@@ -42,6 +42,7 @@
   </header>
 
   <main>
+    <h1 class="list-title"></h1>
     <!-- items list start -->
     <div class="items-list"></div>
     <!-- items list end -->
