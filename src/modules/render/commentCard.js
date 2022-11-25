@@ -4,7 +4,7 @@ export default (comment) => {
 
   card.innerHTML = `
     <div class="comment-card-header">
-      <span>${comment.username}</span>
+      <span>by ${comment.username}</span>
       <span>${comment.creation_date}</span>
     </div>
     <p>${comment.comment}</p>

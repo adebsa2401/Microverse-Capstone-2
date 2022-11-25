@@ -152,12 +152,16 @@ main {
 }
 
 .popup {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 1;
-  height: 100%;
-  padding: 50px 25% 50px 25%;
-  background-color: lightgray;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000b3;
 }
 
 .popup-content {
@@ -165,14 +169,27 @@ main {
   flex-direction: column;
   align-items: center;
   overflow: scroll;
+  padding: 30px;
   height: 80%;
+  width: 50%;
+  background-color: #d3d3d3;
 }
 
 .popup-content .bi-x-lg {
+  position: fixed;
   align-self: flex-end;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .popup-content p {
+  text-align: center;
+  font-style: italic;
+  width: 70%;
+}
+
+.popup-content .item-name {
+  overflow: visible;
   text-align: center;
 }
 
@@ -184,8 +201,58 @@ main {
 .popup-content form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.popup-content form button[type="submit"] {
+  align-self: flex-start;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.popup-content form input,
+.popup-content form input:active,
+.popup-content form textarea,
+.popup-content form textarea:active {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #000000b3;
+  padding: 10px;
+  min-width: 200px;
+  font-style: italic;
+  font-size: medium;
 }
 
 #logo-container * {
   display: inline;
+}
+
+.comments-list {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-card {
+  background-color: #808080;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+}
+
+.comments-list.empty-list {
+  font-style: italic;
+}
+
+.comment-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-card p {
+  text-align: start;
 }

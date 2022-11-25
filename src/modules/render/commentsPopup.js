@@ -13,7 +13,7 @@ export default (data) => {
     <div class="popup-content">
       <i class="bi bi-x-lg"></i>
       <img src="${imageUrl}" alt=""/>
-      <h1>${data.name}</h1>
+      <h1 class="item-name">${data.name}</h1>
       ${data.summary}
       <ul>
         <li><strong>Language:</strong> ${data.language}</li>
