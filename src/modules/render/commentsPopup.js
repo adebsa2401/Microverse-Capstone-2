@@ -36,11 +36,9 @@ export default (data) => {
     </div>
   `.trim();
 
-  // Close the popup
-  popup.querySelector('.bi-x-lg').addEventListener('click', () => {
-    popup.remove();
-  });
+  popup.style.scale = 0;
   document.body.prepend(popup);
+  setTimeout(() => { popup.style.scale = 1; }, 500);
   data.comments.forEach(renderCommentCard);
 
   // render comments count
@@ -52,6 +50,12 @@ export default (data) => {
     commentsList.textContent = 'No comments available';
     commentsList.classList.add('empty-list');
   }
+
+  // close the popup
+  popup.querySelector('.bi-x-lg').addEventListener('click', () => {
+    popup.style.scale = 0;
+    setTimeout(popup.remove, 500);
+  });
 
   // create a comment on the API and render it in the popup
   popup.querySelector('form').addEventListener('submit', async (event) => {
