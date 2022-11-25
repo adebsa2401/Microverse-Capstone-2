@@ -60,12 +60,6 @@ To run tests, run the command below:
 - Twitter: [@Adebsa3](https://twitter.com/Adebsa3)
 - LinkedIn: [Ben Sales](https://www.linkedin.com/in/ben-sal%C3%A8s-2688651b6)
 
-👤 **Ermiyas Demsew**
-
-- GitHub: [@The-Normal-One1](https://github.com/The-Normal-One1)
-- Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
-- LinkedIn: [Ermiyas Demsew](https://linkedin.com/in/ErmiyasDemsew)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
