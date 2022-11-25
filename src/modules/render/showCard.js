@@ -10,7 +10,7 @@ export default (data) => {
   card.classList.add('item-card');
 
   card.innerHTML = `
-      <div class="item-name">${data.show.name}</div>
+      <h2 class="item-name">${data.show.name}</h2>
       <img src="${imageUrl}" alt="a show tv"/>
       <div class="card-footer">
         <span class="likes-count">
