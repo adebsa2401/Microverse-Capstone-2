@@ -49,4 +49,6 @@ export default (data) => {
   });
 
   document.querySelector('.items-list').append(card);
+
+  return card;
 };

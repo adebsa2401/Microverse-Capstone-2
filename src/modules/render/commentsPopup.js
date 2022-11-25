@@ -71,4 +71,6 @@ export default (data) => {
 
     event.target.reset();
   });
+
+  return popup;
 };
