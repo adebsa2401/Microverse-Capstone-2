@@ -11,10 +11,19 @@ export default async (query) => {
 
   const likesMap = {};
   likes.forEach((item) => { likesMap[item.item_id] = item.likes; });
-  response = response.map((data) => {
+  response = await Promise.all(response.map(async (data) => {
+    const comments = await fetch(`${process.env.INVOLVEMENT_API_BASE_URL}apps/${process.env.INVOLVEMENT_API_KEY}/comments?item_id=${data.show.id}`);
+
+    if (comments.ok) {
+      data.comments = await comments.json();
+      data.comments = data.comments.length;
+    } else {
+      data.comments = 0;
+    }
+
     data.likes = likesMap[data.show.id] ?? 0;
     return data;
-  });
+  }));
 
   return response;
 };

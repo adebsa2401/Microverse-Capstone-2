@@ -1,3 +1,5 @@
+import renderCommentCard from './commentCard.js';
+import countComments from '../counter/comments.js';
 import noImage from '../../assets/images/no-image.svg';
 
 export default (data) => {
@@ -17,23 +19,9 @@ export default (data) => {
         <li><strong>Official Site:</strong> <a href="${data.officialSite}" target="_blank" rel="noopener">${data.officialSite}</a></li>
       </ul>
 
-      <h2>Comments <span class="count">(2)</span></h2>
+      <h2>Comments <span class="count"></span></h2>
 
-      <div class="comment-card">
-        <div class="comment-card-header">
-          <span>Alex</span>
-          <span>25/11/2022</span>
-        </div>
-        <p>This is a comment</p>
-      </div>
-
-      <div class="comment-card">
-        <div class="comment-card-header">
-          <span>Alex</span>
-          <span>25/11/2022</span>
-        </div>
-        <p>This is a comment</p>
-      </div>
+      <div class="comments-list"></div>
 
       <h2>Add a comment</h2>
 
@@ -49,4 +37,13 @@ export default (data) => {
     popup.remove();
   });
   document.body.prepend(popup);
+  data.comments.forEach(renderCommentCard);
+
+  popup.querySelector('.count').textContent = `(${countComments(popup)})`;
+
+  const commentsList = popup.querySelector('.comments-list');
+  if (commentsList.childElementCount === 0) {
+    commentsList.textContent = 'No comments available';
+    commentsList.classList.add('empty-list');
+  }
 };
