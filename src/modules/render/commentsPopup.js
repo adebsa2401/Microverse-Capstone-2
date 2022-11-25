@@ -35,10 +35,9 @@ export default (data) => {
     </div>
   `.trim();
 
-  popup.querySelector('.bi-x-lg').addEventListener('click', () => {
-    popup.remove();
-  });
+  popup.style.scale = 0;
   document.body.prepend(popup);
+  setTimeout(() => { popup.style.scale = 1; }, 500);
   data.comments.forEach(renderCommentCard);
 
   popup.querySelector('.count').textContent = `(${countComments(popup)})`;
@@ -48,6 +47,11 @@ export default (data) => {
     commentsList.textContent = 'No comments available';
     commentsList.classList.add('empty-list');
   }
+
+  popup.querySelector('.bi-x-lg').addEventListener('click', () => {
+    popup.style.scale = 0;
+    setTimeout(popup.remove, 500);
+  });
 
   popup.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
