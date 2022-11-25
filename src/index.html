@@ -7,12 +7,12 @@
 </head>
 <body>
   <header>
-    <div id="logo-container">
+    <a id="logo-container" href="">
       <span>Wiki</span>
       <span>Show</span>
-    </div>
+    </a>
 
-    <form action="#" method="get">
+    <form method="get">
       <input type="text" placeholder="Search TV Shows"/>
       <button type="submit"><i class="bi bi-search"></i></button>
     </form>
@@ -22,24 +22,30 @@
         <li>
           <a href="javascript:void(0)">
             <span>TV Shows </span>
-            <span>(0)</span>
+            <span class="count">(0)</span>
           </a>
         </li>
         <li>
           <a href="javascript:void(0)">
             <span>Liked </span>
-            <span>(0)</span>
+            <span class="count">(0)</span>
           </a>
         </li>
         <li>
           <a href="javascript:void(0)">
             <span>Reservations </span>
-            <span>(0)</span>
+            <span class="count">(0)</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
+
+  <main>
+    <!-- items list start -->
+    <div class="items-list"></div>
+    <!-- items list end -->
+  </main>
 
   <footer>
     Copyright <i class="bi bi-c-circle"></i> <span class="current-year"></span>
