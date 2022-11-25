@@ -1,6 +1,7 @@
 import renderCommentCard from './commentCard.js';
 import countComments from '../counter/comments.js';
 import noImage from '../../assets/images/no-image.svg';
+import addComment from '../api/addComment.js';
 
 export default (data) => {
   const imageUrl = data.image ? data.image.original : noImage;
@@ -25,7 +26,7 @@ export default (data) => {
 
       <h2>Add a comment</h2>
 
-      <form method="post">
+      <form>
         <input type="text" name="user" placeholder="Enter your name..."/>
         <textarea name="comment" cols="30" rows="10" placeholder="Your comment here..."></textarea>
         <button type="submit">Comment</button>
@@ -46,4 +47,26 @@ export default (data) => {
     commentsList.textContent = 'No comments available';
     commentsList.classList.add('empty-list');
   }
+
+  popup.querySelector('form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const username = event.target.querySelector('input[name="user"]').value;
+    const comment = event.target.querySelector('textarea[name="comment"]').value;
+
+    if ((username.length > 0) && (comment.length > 0)) {
+      const ok = await addComment(data.id, username, comment);
+      const now = new Date();
+
+      if (ok) {
+        renderCommentCard({
+          username,
+          comment,
+          creation_date: `${now.getFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`,
+        });
+        popup.querySelector('.count').textContent = `(${countComments(popup)})`;
+      }
+    }
+
+    event.target.reset();
+  });
 };
