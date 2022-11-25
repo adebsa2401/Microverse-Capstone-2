@@ -92,7 +92,6 @@ nav li.active .count {
 header {
   display: flex;
   align-items: center;
-  height: 70px;
 }
 
 footer {
@@ -100,8 +99,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  height: 70px;
-  background-color: darkred;
+  padding: 30px;
 }
 
 main {
