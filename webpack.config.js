@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DotEnv = require('dotenv-webpack');
 const path = require('path');
 
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new DotEnv(),
   ],
   module: {
     rules: [
@@ -23,6 +25,13 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: ['svg-url-loader'],
         generator: {
           filename: 'assets/images/[name][ext]',
         },
