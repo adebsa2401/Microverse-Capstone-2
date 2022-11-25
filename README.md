@@ -1,32 +1,94 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# Microverse Capstone Project 2
+<div align="center">
 
-> In this repository, we build the final capstone project of the second module for the Software engineer program
+  <img src="logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
+  <h3><b>WikiShow</b></h3>
 
-## Built With
+</div>
 
-- HTML
-- CSS
-- JS
-- webpack
-- babel
-- jest
-- node.js/npm
+<!-- TABLE OF CONTENTS -->
 
-## Live Demo
+# 📗 Table of Contents
 
-[https://adebsa2401.github.io/Microverse-Capstone-2](https://adebsa2401.github.io/Microverse-Capstone-2)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-## Getting Started
+<!-- PROJECT DESCRIPTION -->
 
-<!-- **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.** -->
+# 📖 [WikiShow] <a name="about-project"></a>
+
+> **WikiShow** is a website that allows the user to seek for TV Shows. He can view informations about any show, comments it or even likes it.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
+    <li><a href="https://babeljs.io/docs/en/">Babel</a></li>
+    <li><a href="https://jestjs.io/docs/getting-started">Jest</a></li>
+    <li><a href="https://nodejs.org/en/docs/">Node.js/npm</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.tvmaze.com/api">TVmaze API</a></li>
+    <li><a href="https://www.notion.so/869e60b5ad104603aa6db59e08150270">Involvement API</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **The user can search for movies by querying using key words**
+- **The user can leave comments on a movie**
+- **The user can like a movie**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://adebsa2401.github.io/Microverse-Capstone-2)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 1. Start cloning this repository by entering the following command:
 
-<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone.git</code></pre>
+<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone-2.git</code></pre>
 
 2. Install npm dependencies by running <pre><code>npm i</code></pre>
 
@@ -36,23 +98,46 @@
 
 ### Prerequisites
 
+In order to run this project you need:
+
 - [node.js / npm](https://nodejs.org/en/download/)
 
-<!-- ### Setup
+### Setup
+
+Clone this repository to your desired folder:
+
+<pre><code>git clone https://github.com/adebsa2401/Microverse-Capstone-2.git</code></pre>
 
 ### Install
 
-### Usage -->
+Install this project with:
+
+<pre><code>npm i</code></pre>
+
+### Usage
+
+To run the project, execute the following command:
+
+<pre><code>npm run build</code></pre>
+<pre><code>npm start</code></pre>
 
 ### Run tests
 
-To run tests, run the command below:
+To run tests, run the following command:
 
-<pre><code>npm test</code></pre>
+<pre><code>npm run test</code></pre>
 
-<!-- ### Deployment -->
+### Deployment
 
-## Authors
+You can deploy this project using:
+
+<pre><code>git subtree push --prefix dist origin gh-pages</code></pre>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Ben Sales**
 
@@ -60,30 +145,48 @@ To run tests, run the command below:
 - Twitter: [@Adebsa3](https://twitter.com/Adebsa3)
 - LinkedIn: [Ben Sales](https://www.linkedin.com/in/ben-sal%C3%A8s-2688651b6)
 
-👤 **Ermiyas Demsew**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- GitHub: [@The-Normal-One1](https://github.com/The-Normal-One1)
-- Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
-- LinkedIn: [Ermiyas Demsew](https://linkedin.com/in/ErmiyasDemsew)
+<!-- FUTURE FEATURES -->
 
-## 🤝 Contributing
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Add navigation to the website**
+- **Be able to make custom research. For now only the default shows displayed at the startup can be browsed**
+- **Add reseravtion on a show item**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-<!-- ## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc -->
+<!-- ACKNOWLEDGEMENTS -->
 
-## 📝 License
+- Microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-<!-- _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._ -->
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
