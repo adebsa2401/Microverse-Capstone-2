@@ -7,11 +7,16 @@ export default (data) => {
   const card = document.createElement('div');
   card.classList.add('item-card');
 
+  // <i class="bi bi-hand-thumbs-up-fill"></i>
+
   card.innerHTML = `
       <div class="item-name">${data.show.name}</div>
       <img src="${imageUrl}" alt="a show tv"/>
       <div class="card-footer">
-        <a href="javascript:void(0)"><i class="bi bi-heart"></i></a>
+        <span class="icon-count">
+          <a href="javascript:void(0)"><i class="bi bi-hand-thumbs-up"></i></a>
+          <span class="count">(${data.likes})</span>
+        </span>
         <span class="icon-count">
           <a href="javascript:void(0)"><i class="bi bi-chat-left"></i></a>
           <span class="count">(1)</span>
