@@ -16,6 +16,10 @@ body > * {
   box-shadow: 5px 5px 20px #000;
 }
 
+header button[type="submit"] * {
+  font-size: 25px;
+}
+
 #logo-container * {
   display: inline;
 }
@@ -35,7 +39,8 @@ header form {
   margin-left: auto;
 }
 
-header input, header input:active {
+header input,
+header input:active {
   border: none;
   outline: none;
   border-radius: 15px;
@@ -50,10 +55,6 @@ header input, header input:active {
 header button[type="submit"] {
   border: none;
   background-color: #fff;
-}
-
-header button[type="submit"] * {
-  font-size: 25px;
 }
 
 .list-title {
