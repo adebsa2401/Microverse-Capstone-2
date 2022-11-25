@@ -1,4 +1,4 @@
-import { getUserLikes } from '../storage/localStorage.js';
+import { getUserComments, getUserLikes } from '../storage/localStorage.js';
 
 export default async (query) => {
   let response = await fetch(`${process.env.SHOW_BASE_URL}search/shows?q=${query}`);
@@ -23,6 +23,7 @@ export default async (query) => {
       data.comments = 0;
     }
 
+    data.commented = getUserComments().includes(data.show.id);
     data.liked = getUserLikes().includes(data.show.id);
     data.likes = likesMap[data.show.id] ?? 0;
     return data;
