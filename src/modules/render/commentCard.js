@@ -11,4 +11,6 @@ export default (comment) => {
   `.trim();
 
   document.querySelector('.comments-list').append(card);
+
+  return card;
 };
