@@ -11,6 +11,10 @@ body > * {
   padding-right: 50px;
 }
 
+.list-title {
+  margin-bottom: 100px;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -22,6 +26,14 @@ a {
 
 nav ul {
   gap: 30px;
+}
+
+nav .count {
+  display: none;
+}
+
+nav li.active .count {
+  display: inline;
 }
 
 header {
@@ -47,6 +59,7 @@ footer {
 main {
   text-align: center;
   padding: 150px;
+  padding-top: 50px;
 }
 
 .items-list {
