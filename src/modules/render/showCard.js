@@ -18,11 +18,11 @@ export default (data) => {
           <span class="count">(${data.likes})</span>
         </span>
         <span class="comments-count">
-          <a href="javascript:void(0)"><i class="bi bi-chat-left"></i></a>
+          <a href="javascript:void(0)"><i class="bi ${data.commented ? 'bi-chat-left-fill' : 'bi-chat-left'}"></i></a>
           <span class="count">(${data.comments})</span>
         </span>
         <span class="reservations-count">
-          <a href="javascript:void(0)"><i class="bi bi-bookmark"></i></a>
+          <a href="javascript:void(0)"><i class="bi ${data.bookmarked ? 'bi-bookmark-fill' : 'bi-bookmark'}"></i></a>
           <span class="count">(2)</span>
         </span>
       </div>
@@ -43,7 +43,7 @@ export default (data) => {
     }
   });
 
-  card.querySelector('.bi-chat-left').addEventListener('click', async () => {
+  card.querySelector('.bi-chat-left, .bi-chat-left-fill').addEventListener('click', async () => {
     const details = await queryShowDetails(data.show.id);
     renderCommentsPopup(details);
   });

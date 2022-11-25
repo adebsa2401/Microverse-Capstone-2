@@ -2,6 +2,7 @@ import renderCommentCard from './commentCard.js';
 import countComments from '../counter/comments.js';
 import noImage from '../../assets/images/no-image.svg';
 import addComment from '../api/addComment.js';
+import { addUserComment } from '../storage/localStorage.js';
 
 export default (data) => {
   const imageUrl = data.image ? data.image.original : noImage;
@@ -64,6 +65,7 @@ export default (data) => {
           creation_date: `${now.getFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`,
         });
         popup.querySelector('.count').textContent = `(${countComments(popup)})`;
+        addUserComment(data.id);
       }
     }
 
