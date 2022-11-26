@@ -257,3 +257,36 @@ main {
 .comment-card p {
   text-align: start;
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(360deg, #000, #fff);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition-duration: 5ms;
+}
+
+.loader-inside {
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.items-list.empty-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 25px;
+}
