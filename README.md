@@ -35,7 +35,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [WikiShow] <a name="about-project"></a>
+# 📖 WikiShow <a name="about-project"></a>
 
 > **WikiShow** is a website that allows the user to seek for TV Shows. He can view informations about any show, comments it or even likes it.
 
